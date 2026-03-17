@@ -1,20 +1,21 @@
 module Greetable 
-    def greet
-            puts "hello welcome"
+    def greet(name)
+            "Hello #{name} ,nice to meet you"  
+    end  
+end
+
+class Teacher 
+     include Greetable  
+      
     end
-end
 
-class Human
-    include Greetable
-end
+class Student 
+     include Greetable  
+      
+    end
 
-class Dog 
-    include Greetable
-end
-
-h = Human.new 
-h.greet
-d = Dog.new
-d.greet 
-
+t = Teacher.new
+puts t.greet("Gautham")
+s = Student.new
+puts s.greet("Ram")
 
